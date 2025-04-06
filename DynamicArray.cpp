@@ -49,4 +49,32 @@ public:
         if (size == capacity) resize();
         arr[size++] = val;
     }
+
+    void addIndex(int val, int index) {
+        if (index < 0 || index > size) return;
+        if (size == capacity) resize();
+        for (int i = size; i > index; i--) arr[i] = arr[i - 1];
+        arr[index] = val;
+        size++;
+    }
+
+    void removeIndex(int index) override {
+        if (index < 0 || index > size) return;
+        for (int i = index; i < size; i++) arr[i] = arr[i + 1];
+        size--;
+    }
+
+    int find(int val) override {
+        for (int i = 0; i < size; i++){
+            if (arr[i] == val) return i;
+        }
+        return -1;
+    }
+
+    void print() override {
+        for (int i = 0; i < size; i++) {
+            cout << arr[i] << " " ;
+        }
+        cout << endl;
+    }
 };
