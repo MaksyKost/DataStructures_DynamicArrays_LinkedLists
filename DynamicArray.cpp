@@ -1,80 +1,61 @@
 #include <iostream>
+#include "DynamicArray.h"
 using namespace std;
 
-// klasa bazowa
-class Structure {
-public:
-    virtual void addBegin(int val) = 0;
-    virtual void addEnd(int val) = 0;
-    virtual void addIndex(int val, int index) = 0;
-    virtual void removeIndex(int index) = 0;
-    virtual int find(int val) = 0;
-    virtual void print() = 0;
-    virtual ~Structure() {}
-};
+ArrayList::ArrayList(int initialCapacity){
+    capacity = initialCapacity;
+    size = 0;
+    arr = new int[capacity];
+}
 
-class ArrayList : public Structure {
-private:
-    int* arr;
-    int size;
-    int capacity;
+ArrayList::~ArrayList(){
+    delete[] arr;
+}
 
-    void resize() {
-        capacity *= 2;
-        int* newArr = new int[capacity];
-        for (int i = 0; i < size; i++) newArr[i] = arr[i];
-        delete[] arr;
-        arr = newArr;
-    }
+void ArrayList::resize() {
+    capacity *= 2;
+    int* newArr = new int[capacity];
+    for (int i = 0; i < size; i++) newArr[i] = arr[i];
+    delete[] arr;
+    arr = newArr;
+}
 
-public:
-    ArrayList(int initialCapacity = 10) {
-        capacity = initialCapacity;
-        size = 0;
-        arr = new int[capacity];
-    }
+void ArrayList::addBegin(int val) {
+    if (size == capacity) resize();
+    for (int i = size; i > 0; i--) arr[i] = arr[i - 1];
+    arr[0] = val;
+    size++;
+}
 
-    ~ArrayList() {
-        delete[] arr;
-    }
+void ArrayList::addEnd(int val) {
+    if (size == capacity) resize();
+    arr[size++] = val;
+}
 
-    void addBegin(int val) override {
-        if (size == capacity) resize();
-        for (int i = size; i > 0; i--) arr[i] = arr[i - 1];
-        arr[0] = val;
-        size++;
-    }
-
-    void addEnd(int val) override {
-        if (size == capacity) resize();
-        arr[size++] = val;
-    }
-
-    void addIndex(int val, int index) {
-        if (index < 0 || index > size) return;
-        if (size == capacity) resize();
+void ArrayList::addIndex(int val, int index) {
+    if (index < 0 || index > size) return;
+    if (size == capacity) resize();
         for (int i = size; i > index; i--) arr[i] = arr[i - 1];
         arr[index] = val;
         size++;
     }
 
-    void removeIndex(int index) override {
-        if (index < 0 || index > size) return;
-        for (int i = index; i < size; i++) arr[i] = arr[i + 1];
-        size--;
-    }
+void ArrayList::removeIndex(int index)  {
+    if (index < 0 || index > size) return;
+    for (int i = index; i < size; i++) arr[i] = arr[i + 1];
+    size--;
+}
 
-    int find(int val) override {
-        for (int i = 0; i < size; i++){
-            if (arr[i] == val) return i;
-        }
-        return -1;
+int ArrayList::find(int val)  {
+    for (int i = 0; i < size; i++){
+        if (arr[i] == val) return i;
     }
+    return -1;
+}
 
-    void print() override {
-        for (int i = 0; i < size; i++) {
-            cout << arr[i] << " " ;
-        }
-        cout << endl;
+void ArrayList::print()  {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " " ;
     }
-};
+    cout << endl;
+}

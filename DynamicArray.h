@@ -18,7 +18,11 @@ class ArrayList : public Structure {
         int* arr;
         int size;
         int capacity;
+        void resize();
 
+    public:
+        ArrayList(int initialCapacity = 10);
+        ~ArrayList();
         virtual void addBegin(int val) override;
         virtual void addEnd(int val) override;
         virtual void addIndex(int val, int index) override;
