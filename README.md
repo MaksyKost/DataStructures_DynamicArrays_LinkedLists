@@ -3,7 +3,7 @@ Implementation and benchmarking of Dynamic Arrays and Linked Lists (C++).
 
 # Data Structures: Dynamic Arrays and Linked Lists
 
-This project was created as part of the Data Structures course.
+This repository was created for the Data Structures course at Wrocław University of Science and Technology.
 
 ## 📌 Goal
 To implement and compare three data structures:
