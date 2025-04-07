@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "DynamicArray.h"
 using namespace std;
 
@@ -21,10 +22,11 @@ void ArrayList::resize() {
 }
 
 void ArrayList::addBegin(int val) {
+    size++;
     if (size == capacity) resize();
     for (int i = size; i > 0; i--) arr[i] = arr[i - 1];
     arr[0] = val;
-    size++;
+   
 }
 
 void ArrayList::addEnd(int val) {
@@ -38,7 +40,16 @@ void ArrayList::addIndex(int val, int index) {
         for (int i = size; i > index; i--) arr[i] = arr[i - 1];
         arr[index] = val;
         size++;
-    }
+}
+
+void ArrayList::removeBegin() {
+    for (int i = 0; i < size; i++) arr[i] = arr[i + 1];
+    size--;
+}
+
+void ArrayList::removeEnd() {
+    size--;
+}
 
 void ArrayList::removeIndex(int index)  {
     if (index < 0 || index > size) return;
@@ -58,4 +69,12 @@ void ArrayList::print()  {
         cout << arr[i] << " " ;
     }
     cout << endl;
+}
+
+void ArrayList::fillRandom(int count, int minVal, int maxVal)  {
+    srand(10);
+    for (int i = 0; i < count; i++) {
+        int val = rand() % (maxVal - minVal + 1) + minVal;
+        addEnd(val);
+    }
 }
