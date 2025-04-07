@@ -1,6 +1,5 @@
 #include "DoublyLinkedList.h"
 #include <cstdlib>
-#include <ctime>
 
 // Konstruktor
 DoublyLinkedList::DoublyLinkedList() : head(nullptr), tail(nullptr) {}
@@ -38,6 +37,33 @@ void DoublyLinkedList::push_back(int value) {
         tail = newNode;
     }
 }
+
+// Dodawanie nowego elementa o wartości na wskazaną pozycję
+void DoublyLinkedList::insert_at(int position, int value) {
+    if (position <= 0) {
+        push_front(value);
+        return;
+    }
+
+    Node* current = head;
+    int index = 0;
+
+    while (current && index < position - 1) {
+        current = current->next;
+        index++;
+    }
+
+    if (!current || !current->next) {
+        push_back(value);
+    } else {
+        Node* newNode = new Node(value);
+        newNode->next = current->next;
+        newNode->prev = current;
+        current->next->prev = newNode;
+        current->next = newNode;
+    }
+}
+
 
 // Usunięcie elementu z początku
 void DoublyLinkedList::pop_front() {
@@ -80,6 +106,46 @@ void DoublyLinkedList::remove(int value) {
         current = current->next;
     }
 }
+
+// Usunięcie elementu znajdującego się na wskazanej pozycji w liście
+void DoublyLinkedList::remove_at(int position) {
+    if (position < 0) return;
+    if (position == 0) {
+        pop_front();
+        return;
+    }
+
+    Node* current = head;
+    int index = 0;
+
+    while (current && index < position) {
+        current = current->next;
+        index++;
+    }
+
+    if (!current) return;
+
+    if (current->prev) current->prev->next = current->next;
+    if (current->next) current->next->prev = current->prev;
+
+    if (current == head) head = current->next;
+    if (current == tail) tail = current->prev;
+
+    delete current;
+}
+
+// Przeszukiwanie listy w poszukiwaniu węzła, który przechowuje wartość równą value
+Node* DoublyLinkedList::find(int value) {
+    Node* current = head;
+    while (current) {
+        if (current->data == value) {
+            return current;
+        }
+        current = current->next;
+    }
+    return nullptr;
+}
+
 
 // Wyświetlenie listy
 void DoublyLinkedList::display() const {
