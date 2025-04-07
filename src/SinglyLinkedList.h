@@ -19,9 +19,12 @@ public:
 
     void addBegin(int val);
     void addEnd(int val);
+    void addIndex(int index, int val);
     void removeBegin();
     void removeEnd();
+    void removeIndex(int index, int val);
     void print() const;
+    void find();
     void clear();
     int getSize() const;
 };
