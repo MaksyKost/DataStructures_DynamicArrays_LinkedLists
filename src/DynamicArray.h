@@ -12,7 +12,8 @@ class Structure {
         virtual void removeIndex(int index) = 0;
         virtual int find(int val) = 0;
         virtual void print() = 0;
-        virtual void fillRandom(int count, int minVal = 0, int maxVal = 100) = 0;
+        virtual void fillRandom(int count, int seed) = 0;
+        virtual int getSize() const =  0;
         virtual ~Structure() {}
 };
 
@@ -34,7 +35,8 @@ class ArrayList : public Structure {
         virtual void removeIndex(int index) override;
         virtual int find(int val) override;
         virtual void print() override;
-        void fillRandom(int count, int minVal, int maxval) override;
+        virtual int getSize() const override;
+        virtual void fillRandom(int count, int seed) override;
 };
 
 #endif // DYNAMICARRAY_H

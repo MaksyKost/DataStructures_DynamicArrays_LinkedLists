@@ -22,11 +22,12 @@ public:
     void addIndex(int index, int val);
     void removeBegin();
     void removeEnd();
-    void removeIndex(int index, int val);
+    void removeIndex(int index);
     void print() const;
-    void find();
+    int  find(int val) const;
     void clear();
     int getSize() const;
+    void fillRandom(int count, int seed);
 };
 
 #endif // SINGLYLINKEDLIST_H
