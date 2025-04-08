@@ -180,7 +180,7 @@ int DoublyLinkedList::getSize() const {
 }
 
 // Generowanie losowych danych
-void DoublyLinkedList::generate_random(int size, int seed) {
+void DoublyLinkedList::fillRandom(int size, int seed) {
     srand(seed);
     for (int i = 0; i < size; ++i) {
         addBegin(rand() % 10000); // Losowa liczba z zakresu 0-9999

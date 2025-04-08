@@ -38,7 +38,7 @@ public:
     int getSize() const;               // Wyświetlenie ilości węzłów w liscie
 
     // Generowanie losowych danych
-    void generate_random(int size, int seed);
+    void fillRandom(int size, int seed);
 };
 
 #endif // DOUBLYLINKEDLIST_HPP
