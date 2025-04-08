@@ -41,7 +41,7 @@ int main() {
     // =======================
     // Testy dla tablicy dynamicznej (DynamicArray)
     // =======================
-    for (int size : SIZES) {
+    for (int size : SIZES1) {
         cout << "\n\n==== Testowanie tablicy dynamicznej dla rozmiaru: " 
              << size << " elementów ====" << endl;
         daFile << "\n\n==== Testowanie tablicy dynamicznej dla rozmiaru: " 
