@@ -45,33 +45,18 @@ void test_operations(DoublyLinkedList& list) {
 }
 
 int main() {
-    /*DoublyLinkedList list;
-    test_operations(list);*/
-
     SinglyLinkedList list1;
-    list1.addBegin(15);
-    list1.print();
-    /*list1.addBegin(7);
-    list1.addBegin(98);
-    list1.addBegin(26);
-    list1.print();
-    list1.addEnd(32);
-    list1.print();
-    list1.addIndex(3, 17);
-    list1.print();
-    list1.removeBegin();
-    list1.print();
-    list1.removeEnd();
-    list1.print();
-    list1.removeIndex(2);
-    list1.print();
-    list1.find(55);
-    list1.getSize();
-    list1.clear();
-    list1.print();
-    return 0;*/
-    list1.fillRandom(10, 6);
-    list1.print();
+    int seed = 123;
+    srand(seed);
+    list1.fillRandom(10000, seed);
+
+    double total = 0;
+    for (int i = 0; i < 10; ++i) {
+        total += list1.timeAddEnd();
+    }
+
+    std::cout << total / 10 <<"ms"<< std::endl;
+
 }
 
 /*

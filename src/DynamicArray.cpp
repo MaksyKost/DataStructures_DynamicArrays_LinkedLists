@@ -73,7 +73,7 @@ void ArrayList::print()  {
 
 void ArrayList::fillRandom(int count, int seed)  {
     srand(seed);
-    for (int i = size - 1; i < count - 1; i++) {
+    for (int i = size; i < count; i++) {
         int val = rand() % 10000;
         addEnd(val);
     }
