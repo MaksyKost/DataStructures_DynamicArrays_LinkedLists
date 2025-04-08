@@ -53,11 +53,10 @@ void test_operations_on_list(DoublyLinkedList& list, int size, int seed) {
 
     // Generowanie danych
     list.generate_random(size, seed);
-    list.display();
 
     // Pomiar dodawania na koniec
     double add_time = measure_time([&]() {
-        list.push_back(9999);
+        list.addEnd(9999);
     });
     cout << "Czas dodania elementu na koniec: " << add_time << " s" << endl;
 
@@ -75,38 +74,6 @@ void test_operations_on_list(DoublyLinkedList& list, int size, int seed) {
     cout << "Czas wyszukiwania: " << search_time << " s" << endl;
 }
 
-void menu() {
-    ArrayList array;
-    DoublyLinkedList list;
-    int choice, size;
-    int seed = 250;
-
-    cout << "Podaj rozmiar struktury: ";
-    cin >> size;
-
-    do {
-        cout << "Menu:\n";
-        cout << "1. Testuj tablicę dynamiczną\n";
-        cout << "2. Testuj listę dwukierunkową\n";
-        cout << "0. Wyjście\n";
-        cout << "Wybierz opcję: ";
-        cin >> choice;
-
-        switch (choice) {
-        case 1:
-            test_operations_on_array(array, size, seed);
-            break;
-        case 2:
-            test_operations_on_list(list, size, seed);
-            break;
-        case 0:
-            cout << "Do zobaczenia!\n";
-            break;
-        default:
-            cout << "Niepoprawny wybór, spróbuj ponownie.\n";
-        }
-    } while (choice != 0);
-}
 
 int main() {
     const int SIZES[] = {50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000}; 
@@ -114,9 +81,9 @@ int main() {
     const int SEED[] = {250, 300, 350, 400, 450, 500, 550, 600, 650, 700}; 
     
     double q_Test_1{}, h_Test_1{}, t_Test_1{}, q_Test_2{}, h_Test_2{}, t_Test_2{}, q_Test_3{}, h_Test_3{}, t_Test_3{};
-    double da_addBegin, da_addEnd, da_addIndex, da_removeBegin, da_removeEnd, da_removeIndex, da_find;
-    double sll_addBegin, sll_addEnd, sll_addIndex, sll_removeBegin, sll_removeEnd, dsll_removeIndex, sll_find;
-    double dll_addBegin, dll_addEnd, dll_addIndex, dll_removeBegin, dll_removeEnd, dll_removeIndex, dll_find;
+    double da_addBegin{}, da_addEnd{}, da_addIndex{}, da_removeBegin{}, da_removeEnd{}, da_removeIndex{}, da_find{};
+    double sll_addBegin{}, sll_addEnd{}, sll_addIndex{}, sll_removeBegin{}, sll_removeEnd{}, dsll_removeIndex{}, sll_find{};
+    double dll_addBegin{}, dll_addEnd{}, dll_addIndex{}, dll_removeBegin{}, dll_removeEnd{}, dll_removeIndex{}, dll_find{};
 
 
     for (int size : SIZES) {
@@ -125,12 +92,38 @@ int main() {
         DoublyLinkedList dlList;
 
         for (int seed : SEED) {
+            srand(seed);
 
             cout << "Testing size: " << "\t" <<  size << " elements" << endl;
-            
     
             for (int t = 0; t < TESTS; t++) {
                 
+
+                cout << "Lista dwukierunkowa:" << endl;
+
+                // Generowanie danych
+                dlList.generate_random(size, seed);
+                
+                // Pomiar dodawania na koniec
+                dll_addBegin += measure_time([&]() {
+                    dlList.addEnd(rand() % 10000);
+                });
+                cout << "Czas dodania elementu na koniec: " << dll_addBegin << " s" << endl;
+
+                // Pomiar usuwania z losowego miejsca
+                dll_addEnd += measure_time([&]() {
+                    dlList.remove_at(rand() % dlList.size());
+                });
+                cout << "Czas usunięcia elementu z losowego miejsca: " << dll_addEnd << " s" << endl;
+
+                // Pomiar wyszukiwania
+                int search_value = rand() % 10000;
+                dll_addIndex += measure_time([&]() {
+                    dlList.find(search_value);
+                });
+                cout << "Czas wyszukiwania: " << dll_addIndex << " s" << endl;
+
+
 
                 fillArrayRandom(arr, size, SEED);
                 clock_t start = clock();

@@ -179,8 +179,19 @@ int DoublyLinkedList::getSize() const {
     return size;
 }
 
+void DoublyLinkedList::clear() {
+    Node1* current = head;
+    while (current) {
+        Node1* next = current->next; // Zapamiętanie wskaźnika na kolejny węzeł
+        delete current;             // Usunięcie aktualnego węzła
+        current = next;             // Przejście do kolejnego węzła
+    }
+    head = nullptr; // Ustawienie wskaźnika początkowego na null
+    tail = nullptr; // Ustawienie wskaźnika końcowego na null
+}
+
 // Generowanie losowych danych
-void DoublyLinkedList::generate_random(int size, int seed) {
+void DoublyLinkedList::fillRandom(int size, int seed) {
     srand(seed);
     for (int i = 0; i < size; ++i) {
         addBegin(rand() % 10000); // Losowa liczba z zakresu 0-9999
