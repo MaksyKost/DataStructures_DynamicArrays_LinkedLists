@@ -9,66 +9,6 @@ using namespace std;
 using namespace std::chrono;
 
 
-void test_operations(DoublyLinkedList& list) {
-    std::cout << "Test operacji:" << std::endl;
-
-    // Dodawanie na początek, koniec i losowe miejsce
-    list.push_front(1);
-    list.push_back(99);
-    list.push_back(25);
-    list.insert_at(1, 50); // Dodanie na losową pozycję
-
-    list.display();
-
-    /*
-    // Usuwanie z początku, końca i losowego miejsca
-    list.pop_front();
-    list.pop_back();
-    list.remove_at(0); // Usunięcie z losowej pozycji
-
-    list.display();
-    */
-    // Wyszukiwanie
-    list.generate_random(10, 250);
-    list.display();
-    list.getSize();
-
-    int search_value = 46; //rand() % 10000;
-    std::cout << "Szukana liczba: " << search_value << std::endl;
-
-    Node* result = list.find(search_value);
-    if (result) {
-        std::cout << "Znaleziono liczbe: " << result->data << std::endl;
-    } else {
-        std::cout << "Liczba nie zostala znaleziona." << std::endl;
-    }
-}
-
-int main() {
-    SinglyLinkedList list1;
-    int seed = 123;
-    srand(seed);
-    list1.fillRandom(10000, seed);
-
-    double total = 0;
-    for (int i = 0; i < 10; ++i) {
-        total += list1.timeAddEnd();
-    }
-
-    std::cout << total / 10 <<"ms"<< std::endl;
-
-}
-
-/*
-int main() {
-    ArrayList arr;
-    arr.fillRandom(10, 5, 12);
-    arr.print();
-    return 0;
-}
-*/
-/*
-
 // Funkcja mierząca czas operacji
 template<typename Function>
 double measure_time(Function func) {
@@ -79,22 +19,22 @@ double measure_time(Function func) {
     return elapsed.count();
 }
 
-void test_operations_on_array(DynamicArray& array, int size, int seed) {
+void test_operations_on_array(ArrayList& array, int size, int seed) {
     cout << "Tablica dynamiczna:" << endl;
 
     // Generowanie danych
-    array.generate_random(size, seed);
-    array.display();
+    array.fillRandom(size, seed);
+    array.print();
 
     // Pomiar dodawania na koniec
     double add_time = measure_time([&]() {
-        array.push_back(9999);
+        array.addEnd(9999);
     });
     cout << "Czas dodania elementu na koniec: " << add_time << " s" << endl;
 
     // Pomiar usuwania z losowego miejsca
     double remove_time = measure_time([&]() {
-        array.remove_at(size / 2);
+        array.removeIndex(size / 2);
     });
     cout << "Czas usunięcia elementu z losowego miejsca: " << remove_time << " s" << endl;
 
@@ -106,11 +46,11 @@ void test_operations_on_array(DynamicArray& array, int size, int seed) {
     cout << "Czas wyszukiwania: " << search_time << " s" << endl;
 }
 
-void test_operations_on_list(DoublyLinkedList& list, int size) {
+void test_operations_on_list(DoublyLinkedList& list, int size, int seed) {
     cout << "Lista dwukierunkowa:" << endl;
 
     // Generowanie danych
-    list.generate_random(size);
+    list.generate_random(size, seed);
     list.display();
 
     // Pomiar dodawania na koniec
@@ -134,9 +74,10 @@ void test_operations_on_list(DoublyLinkedList& list, int size) {
 }
 
 void menu() {
-    DynamicArray array;
+    ArrayList array;
     DoublyLinkedList list;
     int choice, size;
+    int seed = 250;
 
     cout << "Podaj rozmiar struktury: ";
     cin >> size;
@@ -151,10 +92,10 @@ void menu() {
 
         switch (choice) {
         case 1:
-            test_operations_on_array(array, size);
+            test_operations_on_array(array, size, seed);
             break;
         case 2:
-            test_operations_on_list(list, size);
+            test_operations_on_list(list, size, seed);
             break;
         case 0:
             cout << "Do zobaczenia!\n";
@@ -166,7 +107,9 @@ void menu() {
 }
 
 int main() {
+    const int SIZES[] = {50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000}; 
+    const int TESTS = 100;
+    const int SEED[] = {250}; 
     menu();
     return 0;
 }
-    */
