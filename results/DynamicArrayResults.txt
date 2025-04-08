@@ -3,118 +3,118 @@
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 10000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 10000 (średnia z 10 seedów):
-  Dodanie na początek:         9.9952e-06 s
-  Dodanie na koniec:           3.21e-08 s
-  Dodanie do losowego miejsca: 6.3866e-06 s
-  Usunięcie z losowego miejsca: 9.8799e-06 s
-  Usunięcie z początku:         1.1756e-05 s
-  Usunięcie z końca:           2.98e-08 s
-  Wyszukiwanie:                3.06e-08 s
+  Dodanie na początek:         1.05021e-05 s
+  Dodanie na koniec:           3.29e-08 s
+  Dodanie do losowego miejsca: 6.5777e-06 s
+  Usunięcie z losowego miejsca: 1.03606e-05 s
+  Usunięcie z początku:         1.22903e-05 s
+  Usunięcie z końca:           3.18e-08 s
+  Wyszukiwanie:                3.03e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 20000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 20000 (średnia z 10 seedów):
-  Dodanie na początek:         2.00977e-05 s
-  Dodanie na koniec:           2.97e-08 s
-  Dodanie do losowego miejsca: 1.31069e-05 s
-  Usunięcie z losowego miejsca: 2.18333e-05 s
-  Usunięcie z początku:         2.37381e-05 s
-  Usunięcie z końca:           2.88e-08 s
-  Wyszukiwanie:                2.86e-08 s
+  Dodanie na początek:         2.02105e-05 s
+  Dodanie na koniec:           3.29e-08 s
+  Dodanie do losowego miejsca: 1.31465e-05 s
+  Usunięcie z losowego miejsca: 2.18723e-05 s
+  Usunięcie z początku:         2.38193e-05 s
+  Usunięcie z końca:           2.73e-08 s
+  Wyszukiwanie:                3.18e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 30000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 30000 (średnia z 10 seedów):
-  Dodanie na początek:         3.05674e-05 s
-  Dodanie na koniec:           2.86e-08 s
-  Dodanie do losowego miejsca: 1.87428e-05 s
-  Usunięcie z losowego miejsca: 3.40257e-05 s
-  Usunięcie z początku:         3.59732e-05 s
-  Usunięcie z końca:           2.84e-08 s
-  Wyszukiwanie:                2.85e-08 s
+  Dodanie na początek:         3.07378e-05 s
+  Dodanie na koniec:           3.06e-08 s
+  Dodanie do losowego miejsca: 1.88556e-05 s
+  Usunięcie z losowego miejsca: 3.428e-05 s
+  Usunięcie z początku:         3.6177e-05 s
+  Usunięcie z końca:           2.63e-08 s
+  Wyszukiwanie:                2.92e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 40000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 40000 (średnia z 10 seedów):
-  Dodanie na początek:         4.0348e-05 s
-  Dodanie na koniec:           2.94e-08 s
-  Dodanie do losowego miejsca: 2.62092e-05 s
-  Usunięcie z losowego miejsca: 4.56621e-05 s
-  Usunięcie z początku:         4.75735e-05 s
-  Usunięcie z końca:           2.94e-08 s
-  Wyszukiwanie:                2.99e-08 s
+  Dodanie na początek:         4.06758e-05 s
+  Dodanie na koniec:           3.05e-08 s
+  Dodanie do losowego miejsca: 2.62728e-05 s
+  Usunięcie z losowego miejsca: 4.58631e-05 s
+  Usunięcie z początku:         4.77899e-05 s
+  Usunięcie z końca:           3.09e-08 s
+  Wyszukiwanie:                3.07e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 50000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 50000 (średnia z 10 seedów):
-  Dodanie na początek:         5.00583e-05 s
-  Dodanie na koniec:           3.3e-08 s
-  Dodanie do losowego miejsca: 3.70592e-05 s
-  Usunięcie z losowego miejsca: 5.72336e-05 s
-  Usunięcie z początku:         5.91777e-05 s
-  Usunięcie z końca:           3.19e-08 s
-  Wyszukiwanie:                2.84e-08 s
+  Dodanie na początek:         5.06088e-05 s
+  Dodanie na koniec:           3.26e-08 s
+  Dodanie do losowego miejsca: 3.75216e-05 s
+  Usunięcie z losowego miejsca: 5.77142e-05 s
+  Usunięcie z początku:         5.97196e-05 s
+  Usunięcie z końca:           3.13e-08 s
+  Wyszukiwanie:                3.1e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 60000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 60000 (średnia z 10 seedów):
-  Dodanie na początek:         5.98007e-05 s
-  Dodanie na koniec:           2.89e-08 s
-  Dodanie do losowego miejsca: 4.7747e-05 s
-  Usunięcie z losowego miejsca: 6.87757e-05 s
-  Usunięcie z początku:         7.05157e-05 s
-  Usunięcie z końca:           3.67e-08 s
-  Wyszukiwanie:                3.03e-08 s
+  Dodanie na początek:         5.97502e-05 s
+  Dodanie na koniec:           3.23e-08 s
+  Dodanie do losowego miejsca: 4.7809e-05 s
+  Usunięcie z losowego miejsca: 6.87965e-05 s
+  Usunięcie z początku:         7.05842e-05 s
+  Usunięcie z końca:           2.71e-08 s
+  Wyszukiwanie:                2.66e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 70000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 70000 (średnia z 10 seedów):
-  Dodanie na początek:         6.85283e-05 s
-  Dodanie na koniec:           3e-08 s
-  Dodanie do losowego miejsca: 5.74893e-05 s
-  Usunięcie z losowego miejsca: 7.93035e-05 s
-  Usunięcie z początku:         8.12322e-05 s
-  Usunięcie z końca:           2.69e-08 s
-  Wyszukiwanie:                2.91e-08 s
+  Dodanie na początek:         7.03361e-05 s
+  Dodanie na koniec:           3.41e-08 s
+  Dodanie do losowego miejsca: 5.93481e-05 s
+  Usunięcie z losowego miejsca: 8.23414e-05 s
+  Usunięcie z początku:         8.38229e-05 s
+  Usunięcie z końca:           3.1e-08 s
+  Wyszukiwanie:                2.95e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 80000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 80000 (średnia z 10 seedów):
-  Dodanie na początek:         7.82549e-05 s
-  Dodanie na koniec:           3.53e-08 s
-  Dodanie do losowego miejsca: 6.82378e-05 s
-  Usunięcie z losowego miejsca: 9.01626e-05 s
-  Usunięcie z początku:         9.16282e-05 s
-  Usunięcie z końca:           3.01e-08 s
-  Wyszukiwanie:                3.08e-08 s
+  Dodanie na początek:         8.03184e-05 s
+  Dodanie na koniec:           3.27e-08 s
+  Dodanie do losowego miejsca: 7.03268e-05 s
+  Usunięcie z losowego miejsca: 9.4268e-05 s
+  Usunięcie z początku:         9.6189e-05 s
+  Usunięcie z końca:           3.11e-08 s
+  Wyszukiwanie:                3.06e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 90000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 90000 (średnia z 10 seedów):
-  Dodanie na początek:         8.76439e-05 s
-  Dodanie na koniec:           3.21e-08 s
-  Dodanie do losowego miejsca: 7.91981e-05 s
-  Usunięcie z losowego miejsca: 0.000102394 s
-  Usunięcie z początku:         0.000103752 s
-  Usunięcie z końca:           2.53e-08 s
-  Wyszukiwanie:                2.64e-08 s
+  Dodanie na początek:         8.86542e-05 s
+  Dodanie na koniec:           3.14e-08 s
+  Dodanie do losowego miejsca: 8.0752e-05 s
+  Usunięcie z losowego miejsca: 0.000104369 s
+  Usunięcie z początku:         0.000104811 s
+  Usunięcie z końca:           2.77e-08 s
+  Wyszukiwanie:                2.99e-08 s
 
 
 ==== Testowanie tablicy dynamicznej dla rozmiaru: 100000 elementów ====
 
 *** Średnie wyniki dla tablicy dynamicznej dla rozmiaru 100000 (średnia z 10 seedów):
-  Dodanie na początek:         9.76215e-05 s
-  Dodanie na koniec:           3.22e-08 s
-  Dodanie do losowego miejsca: 8.96874e-05 s
-  Usunięcie z losowego miejsca: 0.000114215 s
-  Usunięcie z początku:         0.00011554 s
-  Usunięcie z końca:           2.7e-08 s
-  Wyszukiwanie:                2.88e-08 s
+  Dodanie na początek:         9.79807e-05 s
+  Dodanie na koniec:           3.11e-08 s
+  Dodanie do losowego miejsca: 8.98655e-05 s
+  Usunięcie z losowego miejsca: 0.000114539 s
+  Usunięcie z początku:         0.000115851 s
+  Usunięcie z końca:           2.88e-08 s
+  Wyszukiwanie:                2.92e-08 s

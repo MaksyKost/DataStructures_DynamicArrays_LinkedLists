@@ -3,118 +3,118 @@
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 10000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 10000 (średnia z 10 seedów):
-  Dodanie na początek:         5.98e-08 s
-  Dodanie na koniec:           1.33149e-05 s
-  Dodanie do losowego miejsca: 7.5029e-06 s
-  Usunięcie z losowego miejsca: 2.6058e-06 s
-  Usunięcie z początku:         3.5e-08 s
-  Usunięcie z końca:           1.36322e-05 s
-  Wyszukiwanie:                3.53e-08 s
+  Dodanie na początek:         5.85e-08 s
+  Dodanie na koniec:           1.33536e-05 s
+  Dodanie do losowego miejsca: 7.5021e-06 s
+  Usunięcie z losowego miejsca: 2.6398e-06 s
+  Usunięcie z początku:         3.61e-08 s
+  Usunięcie z końca:           1.36754e-05 s
+  Wyszukiwanie:                3.63e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 20000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 20000 (średnia z 10 seedów):
-  Dodanie na początek:         5.92e-08 s
-  Dodanie na koniec:           2.6454e-05 s
-  Dodanie do losowego miejsca: 7.4311e-06 s
-  Usunięcie z losowego miejsca: 2.6414e-06 s
-  Usunięcie z początku:         3.43e-08 s
-  Usunięcie z końca:           2.6814e-05 s
-  Wyszukiwanie:                3.27e-08 s
+  Dodanie na początek:         6.08e-08 s
+  Dodanie na koniec:           2.63523e-05 s
+  Dodanie do losowego miejsca: 7.5371e-06 s
+  Usunięcie z losowego miejsca: 2.7402e-06 s
+  Usunięcie z początku:         3.73e-08 s
+  Usunięcie z końca:           2.71312e-05 s
+  Wyszukiwanie:                3.44e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 30000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 30000 (średnia z 10 seedów):
-  Dodanie na początek:         8.08e-08 s
-  Dodanie na koniec:           4.40013e-05 s
-  Dodanie do losowego miejsca: 8.2225e-06 s
-  Usunięcie z losowego miejsca: 2.7804e-06 s
-  Usunięcie z początku:         3.74e-08 s
-  Usunięcie z końca:           4.47068e-05 s
-  Wyszukiwanie:                4.15e-08 s
+  Dodanie na początek:         7.91e-08 s
+  Dodanie na koniec:           4.56218e-05 s
+  Dodanie do losowego miejsca: 8.4422e-06 s
+  Usunięcie z losowego miejsca: 2.8502e-06 s
+  Usunięcie z początku:         3.69e-08 s
+  Usunięcie z końca:           4.53405e-05 s
+  Wyszukiwanie:                3.85e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 40000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 40000 (średnia z 10 seedów):
-  Dodanie na początek:         1.023e-07 s
-  Dodanie na koniec:           7.42905e-05 s
-  Dodanie do losowego miejsca: 1.03402e-05 s
-  Usunięcie z losowego miejsca: 2.9437e-06 s
-  Usunięcie z początku:         3.29e-08 s
-  Usunięcie z końca:           7.28446e-05 s
-  Wyszukiwanie:                4.74e-08 s
+  Dodanie na początek:         1.029e-07 s
+  Dodanie na koniec:           7.94615e-05 s
+  Dodanie do losowego miejsca: 1.08766e-05 s
+  Usunięcie z losowego miejsca: 3.017e-06 s
+  Usunięcie z początku:         3.5e-08 s
+  Usunięcie z końca:           7.63171e-05 s
+  Wyszukiwanie:                5.62e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 50000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 50000 (średnia z 10 seedów):
-  Dodanie na początek:         1.081e-07 s
-  Dodanie na koniec:           0.00010092 s
-  Dodanie do losowego miejsca: 1.10381e-05 s
-  Usunięcie z losowego miejsca: 3.0307e-06 s
-  Usunięcie z początku:         3.53e-08 s
-  Usunięcie z końca:           9.7851e-05 s
-  Wyszukiwanie:                5.39e-08 s
+  Dodanie na początek:         1.034e-07 s
+  Dodanie na koniec:           0.000101721 s
+  Dodanie do losowego miejsca: 1.0846e-05 s
+  Usunięcie z losowego miejsca: 3.07e-06 s
+  Usunięcie z początku:         3.82e-08 s
+  Usunięcie z końca:           9.77447e-05 s
+  Wyszukiwanie:                6.56e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 60000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 60000 (średnia z 10 seedów):
-  Dodanie na początek:         1.077e-07 s
-  Dodanie na koniec:           0.000124451 s
-  Dodanie do losowego miejsca: 1.0936e-05 s
-  Usunięcie z losowego miejsca: 3.0034e-06 s
-  Usunięcie z początku:         3.47e-08 s
-  Usunięcie z końca:           0.000120056 s
-  Wyszukiwanie:                5.56e-08 s
+  Dodanie na początek:         1.093e-07 s
+  Dodanie na koniec:           0.000117702 s
+  Dodanie do losowego miejsca: 1.08751e-05 s
+  Usunięcie z losowego miejsca: 3.0658e-06 s
+  Usunięcie z początku:         3.39e-08 s
+  Usunięcie z końca:           0.000113727 s
+  Wyszukiwanie:                6.82e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 70000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 70000 (średnia z 10 seedów):
-  Dodanie na początek:         1.063e-07 s
-  Dodanie na koniec:           0.000144879 s
-  Dodanie do losowego miejsca: 1.12149e-05 s
-  Usunięcie z losowego miejsca: 3.0052e-06 s
-  Usunięcie z początku:         3.56e-08 s
-  Usunięcie z końca:           0.000140588 s
-  Wyszukiwanie:                4.92e-08 s
+  Dodanie na początek:         1.072e-07 s
+  Dodanie na koniec:           0.000140678 s
+  Dodanie do losowego miejsca: 1.11151e-05 s
+  Usunięcie z losowego miejsca: 3.1707e-06 s
+  Usunięcie z początku:         3.69e-08 s
+  Usunięcie z końca:           0.000136557 s
+  Wyszukiwanie:                6.92e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 80000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 80000 (średnia z 10 seedów):
-  Dodanie na początek:         1.111e-07 s
-  Dodanie na koniec:           0.00016815 s
-  Dodanie do losowego miejsca: 1.1512e-05 s
-  Usunięcie z losowego miejsca: 3.1254e-06 s
-  Usunięcie z początku:         3.6e-08 s
-  Usunięcie z końca:           0.000163646 s
-  Wyszukiwanie:                5.56e-08 s
+  Dodanie na początek:         1.124e-07 s
+  Dodanie na koniec:           0.000159031 s
+  Dodanie do losowego miejsca: 1.10078e-05 s
+  Usunięcie z losowego miejsca: 3.1541e-06 s
+  Usunięcie z początku:         3.54e-08 s
+  Usunięcie z końca:           0.000154815 s
+  Wyszukiwanie:                6.71e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 90000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 90000 (średnia z 10 seedów):
-  Dodanie na początek:         1.48e-07 s
-  Dodanie na koniec:           0.000228742 s
-  Dodanie do losowego miejsca: 1.50069e-05 s
-  Usunięcie z losowego miejsca: 3.3602e-06 s
-  Usunięcie z początku:         4.17e-08 s
-  Usunięcie z końca:           0.000221636 s
-  Wyszukiwanie:                7.68e-08 s
+  Dodanie na początek:         1.37e-07 s
+  Dodanie na koniec:           0.000198062 s
+  Dodanie do losowego miejsca: 1.227e-05 s
+  Usunięcie z losowego miejsca: 3.457e-06 s
+  Usunięcie z początku:         4.29e-08 s
+  Usunięcie z końca:           0.000192937 s
+  Wyszukiwanie:                8.35e-08 s
 
 
 ==== Testowanie listy jednokierunkowej dla rozmiaru: 100000 elementów ====
 
 *** Średnie wyniki dla listy jednokierunkowej dla rozmiaru 100000 (średnia z 10 seedów):
-  Dodanie na początek:         1.315e-07 s
-  Dodanie na koniec:           0.000198181 s
-  Dodanie do losowego miejsca: 1.08206e-05 s
-  Usunięcie z losowego miejsca: 2.8946e-06 s
-  Usunięcie z początku:         3.97e-08 s
-  Usunięcie z końca:           0.000194735 s
-  Wyszukiwanie:                4.71e-08 s
+  Dodanie na początek:         1.203e-07 s
+  Dodanie na koniec:           0.000201179 s
+  Dodanie do losowego miejsca: 1.1707e-05 s
+  Usunięcie z losowego miejsca: 3.0889e-06 s
+  Usunięcie z początku:         4.19e-08 s
+  Usunięcie z końca:           0.000196299 s
+  Wyszukiwanie:                6.98e-08 s
