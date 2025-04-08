@@ -1,5 +1,9 @@
 #include <iostream>
+#include <chrono>
+#include <random>
+#include <fstream>
 #include "SinglyLinkedList.h"
+using namespace std::chrono;
 
 SinglyLinkedList::SinglyLinkedList() : head(nullptr), size(0) {}
 SinglyLinkedList::~SinglyLinkedList() {
@@ -127,11 +131,25 @@ void SinglyLinkedList::clear() {
 }
 
 void SinglyLinkedList::fillRandom(int count, int seed) {
-    
     srand(seed);
-
-    for (int i = size - 1; i < count - 1; i++) {
+    for (int i = size; i < count; i++) {
         int val = rand() % 10000;
         addEnd(val);
     }
+}
+
+double SinglyLinkedList::timeAddBegin() {
+    auto start = high_resolution_clock::now();
+    addBegin(rand() % 10000);
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end - start);
+    return duration.count();
+}
+
+double SinglyLinkedList::timeAddEnd() {
+    auto start = high_resolution_clock::now();
+    addEnd(rand() % 10000);
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end - start);
+    return duration.count();
 }

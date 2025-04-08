@@ -28,6 +28,8 @@ public:
     void clear();
     int getSize() const;
     void fillRandom(int count, int seed);
+    double timeAddBegin();
+    double timeAddEnd();
 };
 
 #endif // SINGLYLINKEDLIST_H
