@@ -217,7 +217,7 @@ void menuDLL(DoublyLinkedList& list1) {
         switch (choice) {
             case 1:
                 cout << "Podaj rozmiar: "; cin >> val;
-                list1.generate_random(val, seed);
+                list1.fillRandom(val, seed);
                 break;
             case 2:
                 cout << "Podaj wartość: "; cin >> val;
@@ -242,12 +242,13 @@ void menuDLL(DoublyLinkedList& list1) {
                 cout << "Podaj indeks: "; cin >> index;
                 list1.remove_at(index);
                 break;
-            case 8:
-                cout << "Podaj wartość: "; cin >> val;
-                index = list1.find(val);
-                if (index == -1) cout << "Nie znaleziono.\n";
-                else cout << "Znaleziono " << val << " na pozycji: " << index << "\n";
-                break;
+            case 8: {
+                    cout << "Podaj wartość: "; cin >> val;
+                    Node1* result = list1.find(val);
+                    if (result == nullptr) cout << "Nie znaleziono.\n";
+                    else cout << "Znaleziono " << val << " na pozycji: " << index << "\n";
+                    break;
+                }
             case 9:
                 list1.print();
                 break;
@@ -260,6 +261,7 @@ void menuDLL(DoublyLinkedList& list1) {
 }
 
 int main() {
+    system("chcp 65001 > nul");
     ArrayList* arr = nullptr;
     SinglyLinkedList* list = nullptr;
     DoublyLinkedList* list1 = nullptr;
