@@ -2,18 +2,14 @@
 #include <chrono>
 
 #include "src/DynamicArray.h"
-<<<<<<< HEAD
 #include "src/DoublyLinkedList.h"
-
-=======
 #include "src/SinglyLinkedList.h"
-//#include "src/DoublyLinkedList.h"
->>>>>>> 23610ece2b9045a9cf0942572e132e143f346a9e
+
 using namespace std;
 using namespace std::chrono;
 
 
-/*void test_operations(DoublyLinkedList& list) {
+void test_operations(DoublyLinkedList& list) {
     std::cout << "Test operacji:" << std::endl;
 
     // Dodawanie na początek, koniec i losowe miejsce
@@ -46,7 +42,7 @@ using namespace std::chrono;
     } else {
         std::cout << "Liczba nie zostala znaleziona." << std::endl;
     }
-}*/
+}
 
 int main() {
     /*DoublyLinkedList list;
