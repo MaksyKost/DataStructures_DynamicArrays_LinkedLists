@@ -82,3 +82,9 @@ void ArrayList::fillRandom(int count, int seed)  {
 int ArrayList::getSize() const {
     return size;
 }
+
+void ArrayList::clear() {
+    delete[] arr;
+    arr = new int[capacity];
+    size = 0;
+}

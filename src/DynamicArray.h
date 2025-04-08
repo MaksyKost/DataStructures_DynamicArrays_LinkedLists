@@ -14,6 +14,7 @@ class Structure {
         virtual void print() = 0;
         virtual void fillRandom(int count, int seed) = 0;
         virtual int getSize() const =  0;
+        virtual void clear() = 0;
         virtual ~Structure() {}
 };
 
@@ -37,6 +38,7 @@ class ArrayList : public Structure {
         virtual void print() override;
         virtual int getSize() const override;
         virtual void fillRandom(int count, int seed) override;
+        virtual void clear() override;
 };
 
 #endif // DYNAMICARRAY_H
