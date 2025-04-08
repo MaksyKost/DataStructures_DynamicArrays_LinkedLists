@@ -35,6 +35,8 @@ public:
     void display() const;           // Wyświetlanie listy
     void display_reverse() const;   // Wyświetlanie od końca
 
+    int getSize() const;               // Wyświetlenie ilości węzłów w liscie
+
     // Generowanie losowych danych
     void generate_random(int size, int seed);
 };

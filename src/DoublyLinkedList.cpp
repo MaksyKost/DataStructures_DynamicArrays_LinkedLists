@@ -167,6 +167,18 @@ void DoublyLinkedList::display_reverse() const {
     std::cout << std::endl;
 }
 
+// Wyświetlenie ilości węzłów w liscie
+int DoublyLinkedList::getSize() const {
+    int size{};
+    Node* current = head;
+    while (current) {
+        size++;
+        current = current->next;
+    }
+    std::cout << size << std::endl;
+    return size;
+}
+
 // Generowanie losowych danych
 void DoublyLinkedList::generate_random(int size, int seed) {
     srand(seed);
