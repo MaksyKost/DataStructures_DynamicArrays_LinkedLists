@@ -57,8 +57,6 @@ void fancyMenuTitle() {
 | |\/| |  _| |  \| | | | |
 | |  | | |___| |\  | \_/ |
 |_|  |_|_____|_| \_|\___/
-
-            MENU
 )";
 
     for (char c : title) {
@@ -70,19 +68,19 @@ void fancyMenuTitle() {
 void menuArray(Structure *structure) {
     int choice, val, index;
     do {
-        cout << "\n--- DynamicArray MENU ---\n";
-        cout << "| 1. Utwórz losowo        |\n";
-        cout << "| 2. Dodaj na początek    |\n";
-        cout << "| 3. Dodaj na koniec      |\n";
-        cout << "| 4. Dodaj na indeks      |\n";
-        cout << "| 5. Usuń z początku      |\n";
-        cout << "| 6. Usuń z końca         |\n";
-        cout << "| 7. Usuń z indeksu       |\n";
-        cout << "| 8. Znajdź wartość       |\n";
-        cout << "| 9. Wyświetl             |\n";
-        cout << "| 10. Wyczyść             |\n";
-        cout << "| 0. Wyjdź                |\n";
-        cout << "---------------------------\n";
+        cout << "\n------- DynamicArray MENU ------\n";
+        cout << "| 1. Utwórz losowo             |\n";
+        cout << "| 2. Dodaj na początek         |\n";
+        cout << "| 3. Dodaj na koniec           |\n";
+        cout << "| 4. Dodaj na indeks           |\n";
+        cout << "| 5. Usuń z początku           |\n";
+        cout << "| 6. Usuń z końca              |\n";
+        cout << "| 7. Usuń z indeksu            |\n";
+        cout << "| 8. Znajdź wartość            |\n";
+        cout << "| 9. Wyświetl                  |\n";
+        cout << "| 10. Wyczyść                  |\n";
+        cout << "| 0. Wyjdź                     |\n";
+        cout << "--------------------------------\n";
         cout << "Twój wybór: ";
         cin >> choice;
 
@@ -134,19 +132,19 @@ void menuArray(Structure *structure) {
 void menuSLL(SinglyLinkedList& list) {
     int choice, val, index;
     do {
-        cout << "\n--- DynamicArray MENU ---\n";
-        cout << "| 1. Utwórz losowo        |\n";
-        cout << "| 2. Dodaj na początek    |\n";
-        cout << "| 3. Dodaj na koniec      |\n";
-        cout << "| 4. Dodaj na indeks      |\n";
-        cout << "| 5. Usuń z początku      |\n";
-        cout << "| 6. Usuń z końca         |\n";
-        cout << "| 7. Usuń z indeksu       |\n";
-        cout << "| 8. Znajdź wartość       |\n";
-        cout << "| 9. Wyświetl             |\n";
-        cout << "| 10. Wyczyść             |\n";
-        cout << "| 0. Wyjdź                |\n";
-        cout << "---------------------------\n";
+        cout << "\n------- Single Linked List MENU -------\n";
+        cout << "| 1. Utwórz losowo                    |\n";
+        cout << "| 2. Dodaj na początek                |\n";
+        cout << "| 3. Dodaj na koniec                  |\n";
+        cout << "| 4. Dodaj na indeks                  |\n";
+        cout << "| 5. Usuń z początku                  |\n";
+        cout << "| 6. Usuń z końca                     |\n";
+        cout << "| 7. Usuń z indeksu                   |\n";
+        cout << "| 8. Znajdź wartość                   |\n";
+        cout << "| 9. Wyświetl                         |\n";
+        cout << "| 10. Wyczyść                         |\n";
+        cout << "| 0. Wyjdź                            |\n";
+        cout << "---------------------------------------\n";
         cout << "Twój wybór: ";
         cin >> choice;
 
@@ -198,19 +196,19 @@ void menuSLL(SinglyLinkedList& list) {
 void menuDLL(DoublyLinkedList& list1) {
     int choice, val, index;
     do {
-        cout << "\n--- DynamicArray MENU ---\n";
-        cout << "| 1. Utwórz losowo        |\n";
-        cout << "| 2. Dodaj na początek    |\n";
-        cout << "| 3. Dodaj na koniec      |\n";
-        cout << "| 4. Dodaj na indeks      |\n";
-        cout << "| 5. Usuń z początku      |\n";
-        cout << "| 6. Usuń z końca         |\n";
-        cout << "| 7. Usuń z indeksu       |\n";
-        cout << "| 8. Znajdź wartość       |\n";
-        cout << "| 9. Wyświetl             |\n";
-        cout << "| 10. Wyczyść             |\n";
-        cout << "| 0. Wyjdź                |\n";
-        cout << "---------------------------\n";
+        cout << "\n------- Doubly Linked List MENU -------\n";
+        cout << "| 1. Utwórz losowo                      |\n";
+        cout << "| 2. Dodaj na początek                  |\n";
+        cout << "| 3. Dodaj na koniec                    |\n";
+        cout << "| 4. Dodaj na indeks                    |\n";
+        cout << "| 5. Usuń z początku                    |\n";
+        cout << "| 6. Usuń z końca                       |\n";
+        cout << "| 7. Usuń z indeksu                     |\n";
+        cout << "| 8. Znajdź wartość                     |\n";
+        cout << "| 9. Wyświetl                           |\n";
+        cout << "| 10. Wyczyść                           |\n";
+        cout << "| 0. Wyjdź                              |\n";
+        cout << "-----------------------------------------\n";
         cout << "Twój wybór: ";
         cin >> choice;
 
@@ -268,7 +266,7 @@ int main() {
     int choice;
     do {
         fancyMenuTitle();
-        cout << "|-------- Wybierz opcję --------\n";
+        cout << "--------  Wybierz opcję --------\n";
         cout << "| 1. Tablica dynamiczna        |\n";
         cout << "| 2. Lista jednokierunkowa     |\n";
         cout << "| 3. Lista jednokierunkowa     |\n";
