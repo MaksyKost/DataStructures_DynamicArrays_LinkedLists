@@ -24,11 +24,11 @@ public:
     // Metody operacji
     void addBegin(int value);     // Dodanie na początek
     void addEnd(int value);      // Dodanie na koniec
-    void insert_at(int position, int value);  // Dodawanie nowego elementa o wartości na wskazaną pozycję 
+    void addIndex(int position, int value);  // Dodawanie nowego elementa o wartości na wskazaną pozycję 
     void removeBegin();               // Usunięcie z początku
     void removeEnd();                // Usunięcie z końca
     void remove(int value);         // Usunięcie konkretnej wartości
-    void remove_at(int position);   // Usunięcie elementu znajdującego się na wskazanej pozycji w liście
+    void removeIndex(int position);   // Usunięcie elementu znajdującego się na wskazanej pozycji w liście
     Node1* find(int value);          // Przeszukiwanie listy w poszukiwaniu węzła, który przechowuje wartość równą value
 
     // Dostęp i wyświetlanie

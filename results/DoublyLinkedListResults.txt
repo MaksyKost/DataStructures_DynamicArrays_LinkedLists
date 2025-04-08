@@ -1,0 +1,120 @@
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 10000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 10000 (średnia z 10 seedów):
+  Dodanie na początek:         4.48e-08 s
+  Dodanie na koniec:           4.65e-08 s
+  Dodanie do losowego miejsca: 3.6867e-05 s
+  Usunięcie z losowego miejsca: 1.9273e-05 s
+  Usunięcie z początku:         5.56e-08 s
+  Usunięcie z końca:           6.83e-08 s
+  Wyszukiwanie:                1.06296e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 20000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 20000 (średnia z 10 seedów):
+  Dodanie na początek:         5.91e-08 s
+  Dodanie na koniec:           4.86e-08 s
+  Dodanie do losowego miejsca: 6.89425e-05 s
+  Usunięcie z losowego miejsca: 3.6261e-05 s
+  Usunięcie z początku:         9.26e-08 s
+  Usunięcie z końca:           9.21e-08 s
+  Wyszukiwanie:                1.17733e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 30000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 30000 (średnia z 10 seedów):
+  Dodanie na początek:         5.53e-08 s
+  Dodanie na koniec:           5.68e-08 s
+  Dodanie do losowego miejsca: 0.000108271 s
+  Usunięcie z losowego miejsca: 5.96049e-05 s
+  Usunięcie z początku:         1.421e-07 s
+  Usunięcie z końca:           1.872e-07 s
+  Wyszukiwanie:                1.45674e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 40000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 40000 (średnia z 10 seedów):
+  Dodanie na początek:         5.34e-08 s
+  Dodanie na koniec:           5.21e-08 s
+  Dodanie do losowego miejsca: 0.000157562 s
+  Usunięcie z losowego miejsca: 9.48603e-05 s
+  Usunięcie z początku:         1.498e-07 s
+  Usunięcie z końca:           2.121e-07 s
+  Wyszukiwanie:                1.13528e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 50000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 50000 (średnia z 10 seedów):
+  Dodanie na początek:         5.77e-08 s
+  Dodanie na koniec:           5.46e-08 s
+  Dodanie do losowego miejsca: 0.000190568 s
+  Usunięcie z losowego miejsca: 0.00011572 s
+  Usunięcie z początku:         1.507e-07 s
+  Usunięcie z końca:           2.068e-07 s
+  Wyszukiwanie:                2.12609e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 60000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 60000 (średnia z 10 seedów):
+  Dodanie na początek:         9.19e-08 s
+  Dodanie na koniec:           5.32e-08 s
+  Dodanie do losowego miejsca: 0.000246487 s
+  Usunięcie z losowego miejsca: 0.000139041 s
+  Usunięcie z początku:         1.573e-07 s
+  Usunięcie z końca:           2.294e-07 s
+  Wyszukiwanie:                1.8244e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 70000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 70000 (średnia z 10 seedów):
+  Dodanie na początek:         1.231e-07 s
+  Dodanie na koniec:           6.06e-08 s
+  Dodanie do losowego miejsca: 0.000300788 s
+  Usunięcie z losowego miejsca: 0.00015481 s
+  Usunięcie z początku:         1.602e-07 s
+  Usunięcie z końca:           2.403e-07 s
+  Wyszukiwanie:                2.81709e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 80000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 80000 (średnia z 10 seedów):
+  Dodanie na początek:         1.026e-07 s
+  Dodanie na koniec:           6.18e-08 s
+  Dodanie do losowego miejsca: 0.000320482 s
+  Usunięcie z losowego miejsca: 0.000177818 s
+  Usunięcie z początku:         1.62e-07 s
+  Usunięcie z końca:           2.37e-07 s
+  Wyszukiwanie:                2.41671e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 90000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 90000 (średnia z 10 seedów):
+  Dodanie na początek:         1.59e-07 s
+  Dodanie na koniec:           5.98e-08 s
+  Dodanie do losowego miejsca: 0.000386023 s
+  Usunięcie z losowego miejsca: 0.000187008 s
+  Usunięcie z początku:         1.757e-07 s
+  Usunięcie z końca:           2.435e-07 s
+  Wyszukiwanie:                1.51467e-05 s
+
+
+==== Testowanie listy dwukierunkowej dla rozmiaru: 100000 elementów ====
+
+*** Średnie wyniki dla listy dwukierunkowej dla rozmiaru 100000 (średnia z 10 seedów):
+  Dodanie na początek:         1.646e-07 s
+  Dodanie na koniec:           6.32e-08 s
+  Dodanie do losowego miejsca: 0.00041993 s
+  Usunięcie z losowego miejsca: 0.00021301 s
+  Usunięcie z początku:         1.682e-07 s
+  Usunięcie z końca:           2.431e-07 s
+  Wyszukiwanie:                2.5084e-05 s

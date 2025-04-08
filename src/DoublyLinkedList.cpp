@@ -39,7 +39,7 @@ void DoublyLinkedList::addEnd(int value) {
 }
 
 // Dodawanie nowego elementa o wartości na wskazaną pozycję
-void DoublyLinkedList::insert_at(int position, int value) {
+void DoublyLinkedList::addIndex(int position, int value) {
     if (position <= 0) {
         addBegin(value);
         return;
@@ -108,7 +108,7 @@ void DoublyLinkedList::remove(int value) {
 }
 
 // Usunięcie elementu znajdującego się na wskazanej pozycji w liście
-void DoublyLinkedList::remove_at(int position) {
+void DoublyLinkedList::removeIndex(int position) {
     if (position < 0) return;
     if (position == 0) {
         removeBegin();
@@ -175,7 +175,6 @@ int DoublyLinkedList::getSize() const {
         size++;
         current = current->next;
     }
-    std::cout << size << std::endl;
     return size;
 }
 
