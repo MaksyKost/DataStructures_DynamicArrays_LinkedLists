@@ -71,10 +71,14 @@ void ArrayList::print()  {
     cout << endl;
 }
 
-void ArrayList::fillRandom(int count, int minVal, int maxVal)  {
-    srand(10);
-    for (int i = 0; i < count; i++) {
-        int val = rand() % (maxVal - minVal + 1) + minVal;
+void ArrayList::fillRandom(int count, int seed)  {
+    srand(seed);
+    for (int i = size - 1; i < count - 1; i++) {
+        int val = rand() % 10000;
         addEnd(val);
     }
+}
+
+int ArrayList::getSize() const {
+    return size;
 }

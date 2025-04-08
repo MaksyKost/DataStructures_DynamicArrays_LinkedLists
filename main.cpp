@@ -2,13 +2,18 @@
 #include <chrono>
 
 #include "src/DynamicArray.h"
+<<<<<<< HEAD
 #include "src/DoublyLinkedList.h"
 
+=======
+#include "src/SinglyLinkedList.h"
+//#include "src/DoublyLinkedList.h"
+>>>>>>> 23610ece2b9045a9cf0942572e132e143f346a9e
 using namespace std;
 using namespace std::chrono;
 
 
-void test_operations(DoublyLinkedList& list) {
+/*void test_operations(DoublyLinkedList& list) {
     std::cout << "Test operacji:" << std::endl;
 
     // Dodawanie na początek, koniec i losowe miejsce
@@ -41,12 +46,36 @@ void test_operations(DoublyLinkedList& list) {
     } else {
         std::cout << "Liczba nie zostala znaleziona." << std::endl;
     }
-}
+}*/
 
 int main() {
-    DoublyLinkedList list;
-    test_operations(list);
-    return 0;
+    /*DoublyLinkedList list;
+    test_operations(list);*/
+
+    SinglyLinkedList list1;
+    list1.addBegin(15);
+    list1.print();
+    /*list1.addBegin(7);
+    list1.addBegin(98);
+    list1.addBegin(26);
+    list1.print();
+    list1.addEnd(32);
+    list1.print();
+    list1.addIndex(3, 17);
+    list1.print();
+    list1.removeBegin();
+    list1.print();
+    list1.removeEnd();
+    list1.print();
+    list1.removeIndex(2);
+    list1.print();
+    list1.find(55);
+    list1.getSize();
+    list1.clear();
+    list1.print();
+    return 0;*/
+    list1.fillRandom(10, 6);
+    list1.print();
 }
 
 /*

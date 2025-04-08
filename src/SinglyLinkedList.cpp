@@ -66,7 +66,72 @@ void SinglyLinkedList::removeEnd() {
         while (current->next->next != nullptr) current = current->next;
         current->next = nullptr;
         delete current->next;
-        current->next = nullptr;
     }
     size--;
+}
+
+void SinglyLinkedList::removeIndex(int index) {
+    if (head == nullptr) return;
+
+    if (index < 0 || index >= size) {
+        throw std::out_of_range("Invalid index");
+    }
+
+    if (index == 0) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    } else {
+        Node* current = head;
+        for (int i = 0; i < index - 1; i++) current = current->next;
+        Node* temp = current->next;
+        current->next = temp->next;
+        delete temp;
+    }
+    size--;
+}
+
+int SinglyLinkedList::find(int val) const {
+    Node* current = head;
+    int index = 0;
+    while (current != nullptr) {
+        if (current->data == val) return index;
+        index++;
+        current = current->next;
+    }
+    return -1;
+}
+
+void SinglyLinkedList::print() const {
+    Node* current = head;
+    while (current != nullptr) {
+        std::cout << current->data << " ";
+        current = current->next;
+    }
+    std::cout << "\n";
+}
+
+int SinglyLinkedList::getSize() const {
+    return size;
+}
+
+void SinglyLinkedList::clear() {
+    Node* current = head;
+    while (current != nullptr) {
+        Node* next = current->next;
+        delete current;
+        current = next;
+    }
+    head = nullptr;
+    size = 0;
+}
+
+void SinglyLinkedList::fillRandom(int count, int seed) {
+    
+    srand(seed);
+
+    for (int i = size - 1; i < count - 1; i++) {
+        int val = rand() % 10000;
+        addEnd(val);
+    }
 }
