@@ -6,9 +6,9 @@ DoublyLinkedList::DoublyLinkedList() : head(nullptr), tail(nullptr) {}
 
 // Destruktor
 DoublyLinkedList::~DoublyLinkedList() {
-    Node* current = head;
+    Node1* current = head;
     while (current) {
-        Node* next = current->next;
+        Node1* next = current->next;
         delete current;
         current = next;
     }
@@ -16,25 +16,25 @@ DoublyLinkedList::~DoublyLinkedList() {
 
 // Dodanie elementu na początek
 void DoublyLinkedList::push_front(int value) {
-    Node* newNode = new Node(value);
+    Node1* newNode1 = new Node1(value);
     if (!head) {
-        head = tail = newNode;
+        head = tail = newNode1;
     } else {
-        newNode->next = head;
-        head->prev = newNode;
-        head = newNode;
+        newNode1->next = head;
+        head->prev = newNode1;
+        head = newNode1;
     }
 }
 
 // Dodanie elementu na koniec
 void DoublyLinkedList::push_back(int value) {
-    Node* newNode = new Node(value);
+    Node1* newNode1 = new Node1(value);
     if (!tail) {
-        head = tail = newNode;
+        head = tail = newNode1;
     } else {
-        newNode->prev = tail;
-        tail->next = newNode;
-        tail = newNode;
+        newNode1->prev = tail;
+        tail->next = newNode1;
+        tail = newNode1;
     }
 }
 
@@ -45,7 +45,7 @@ void DoublyLinkedList::insert_at(int position, int value) {
         return;
     }
 
-    Node* current = head;
+    Node1* current = head;
     int index = 0;
 
     while (current && index < position - 1) {
@@ -56,11 +56,11 @@ void DoublyLinkedList::insert_at(int position, int value) {
     if (!current || !current->next) {
         push_back(value);
     } else {
-        Node* newNode = new Node(value);
-        newNode->next = current->next;
-        newNode->prev = current;
-        current->next->prev = newNode;
-        current->next = newNode;
+        Node1* newNode1 = new Node1(value);
+        newNode1->next = current->next;
+        newNode1->prev = current;
+        current->next->prev = newNode1;
+        current->next = newNode1;
     }
 }
 
@@ -69,7 +69,7 @@ void DoublyLinkedList::insert_at(int position, int value) {
 void DoublyLinkedList::pop_front() {
     if (!head) return;
 
-    Node* toDelete = head;
+    Node1* toDelete = head;
     head = head->next;
     if (head) head->prev = nullptr;
     else tail = nullptr;
@@ -81,7 +81,7 @@ void DoublyLinkedList::pop_front() {
 void DoublyLinkedList::pop_back() {
     if (!tail) return;
 
-    Node* toDelete = tail;
+    Node1* toDelete = tail;
     tail = tail->prev;
     if (tail) tail->next = nullptr;
     else head = nullptr;
@@ -91,7 +91,7 @@ void DoublyLinkedList::pop_back() {
 
 // Usunięcie elementu o konkretnej wartości
 void DoublyLinkedList::remove(int value) {
-    Node* current = head;
+    Node1* current = head;
     while (current) {
         if (current->data == value) {
             if (current->prev) current->prev->next = current->next;
@@ -115,7 +115,7 @@ void DoublyLinkedList::remove_at(int position) {
         return;
     }
 
-    Node* current = head;
+    Node1* current = head;
     int index = 0;
 
     while (current && index < position) {
@@ -135,8 +135,8 @@ void DoublyLinkedList::remove_at(int position) {
 }
 
 // Przeszukiwanie listy w poszukiwaniu węzła, który przechowuje wartość równą value
-Node* DoublyLinkedList::find(int value) {
-    Node* current = head;
+Node1* DoublyLinkedList::find(int value) {
+    Node1* current = head;
     while (current) {
         if (current->data == value) {
             return current;
@@ -149,7 +149,7 @@ Node* DoublyLinkedList::find(int value) {
 
 // Wyświetlenie listy
 void DoublyLinkedList::display() const {
-    Node* current = head;
+    Node1* current = head;
     while (current) {
         std::cout << current->data << " ";
         current = current->next;
@@ -159,7 +159,7 @@ void DoublyLinkedList::display() const {
 
 // Wyświetlenie listy od końca
 void DoublyLinkedList::display_reverse() const {
-    Node* current = tail;
+    Node1* current = tail;
     while (current) {
         std::cout << current->data << " ";
         current = current->prev;
@@ -170,7 +170,7 @@ void DoublyLinkedList::display_reverse() const {
 // Wyświetlenie ilości węzłów w liscie
 int DoublyLinkedList::getSize() const {
     int size{};
-    Node* current = head;
+    Node1* current = head;
     while (current) {
         size++;
         current = current->next;
