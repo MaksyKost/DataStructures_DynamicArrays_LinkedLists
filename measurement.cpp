@@ -109,7 +109,13 @@ void menu() {
 int main() {
     const int SIZES[] = {50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000}; 
     const int TESTS = 100;
-    const int SEED[] = {250}; 
-    menu();
+    const int SEED[] = {250, 300, 350, 400, 450, 500, 550, 600, 650, 700}; 
+    
+    
+
+
+
+
+
     return 0;
 }

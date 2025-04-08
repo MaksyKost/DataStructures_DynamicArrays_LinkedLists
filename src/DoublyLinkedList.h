@@ -22,17 +22,17 @@ public:
     ~DoublyLinkedList();
 
     // Metody operacji
-    void push_front(int value);     // Dodanie na początek
-    void push_back(int value);      // Dodanie na koniec
+    void addBegin(int value);     // Dodanie na początek
+    void addEnd(int value);      // Dodanie na koniec
     void insert_at(int position, int value);  // Dodawanie nowego elementa o wartości na wskazaną pozycję 
-    void pop_front();               // Usunięcie z początku
-    void pop_back();                // Usunięcie z końca
+    void removeBegin();               // Usunięcie z początku
+    void removeEnd();                // Usunięcie z końca
     void remove(int value);         // Usunięcie konkretnej wartości
     void remove_at(int position);   // Usunięcie elementu znajdującego się na wskazanej pozycji w liście
     Node1* find(int value);          // Przeszukiwanie listy w poszukiwaniu węzła, który przechowuje wartość równą value
 
     // Dostęp i wyświetlanie
-    void display() const;           // Wyświetlanie listy
+    void print() const;           // Wyświetlanie listy
     void display_reverse() const;   // Wyświetlanie od końca
 
     int getSize() const;               // Wyświetlenie ilości węzłów w liscie

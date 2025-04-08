@@ -36,7 +36,7 @@ void test_operations(DoublyLinkedList& list) {
     int search_value = 46; //rand() % 10000;
     std::cout << "Szukana liczba: " << search_value << std::endl;
 
-    Node* result = list.find(search_value);
+    Node1* result = list.find(search_value);
     if (result) {
         std::cout << "Znaleziono liczbe: " << result->data << std::endl;
     } else {

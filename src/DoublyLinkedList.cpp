@@ -15,7 +15,7 @@ DoublyLinkedList::~DoublyLinkedList() {
 }
 
 // Dodanie elementu na początek
-void DoublyLinkedList::push_front(int value) {
+void DoublyLinkedList::addBegin(int value) {
     Node1* newNode1 = new Node1(value);
     if (!head) {
         head = tail = newNode1;
@@ -27,7 +27,7 @@ void DoublyLinkedList::push_front(int value) {
 }
 
 // Dodanie elementu na koniec
-void DoublyLinkedList::push_back(int value) {
+void DoublyLinkedList::addEnd(int value) {
     Node1* newNode1 = new Node1(value);
     if (!tail) {
         head = tail = newNode1;
@@ -41,7 +41,7 @@ void DoublyLinkedList::push_back(int value) {
 // Dodawanie nowego elementa o wartości na wskazaną pozycję
 void DoublyLinkedList::insert_at(int position, int value) {
     if (position <= 0) {
-        push_front(value);
+        addBegin(value);
         return;
     }
 
@@ -54,7 +54,7 @@ void DoublyLinkedList::insert_at(int position, int value) {
     }
 
     if (!current || !current->next) {
-        push_back(value);
+        addEnd(value);
     } else {
         Node1* newNode1 = new Node1(value);
         newNode1->next = current->next;
@@ -66,7 +66,7 @@ void DoublyLinkedList::insert_at(int position, int value) {
 
 
 // Usunięcie elementu z początku
-void DoublyLinkedList::pop_front() {
+void DoublyLinkedList::removeBegin() {
     if (!head) return;
 
     Node1* toDelete = head;
@@ -78,7 +78,7 @@ void DoublyLinkedList::pop_front() {
 }
 
 // Usunięcie elementu z końca
-void DoublyLinkedList::pop_back() {
+void DoublyLinkedList::removeEnd() {
     if (!tail) return;
 
     Node1* toDelete = tail;
@@ -111,7 +111,7 @@ void DoublyLinkedList::remove(int value) {
 void DoublyLinkedList::remove_at(int position) {
     if (position < 0) return;
     if (position == 0) {
-        pop_front();
+        removeBegin();
         return;
     }
 
@@ -148,7 +148,7 @@ Node1* DoublyLinkedList::find(int value) {
 
 
 // Wyświetlenie listy
-void DoublyLinkedList::display() const {
+void DoublyLinkedList::print() const {
     Node1* current = head;
     while (current) {
         std::cout << current->data << " ";
@@ -183,6 +183,6 @@ int DoublyLinkedList::getSize() const {
 void DoublyLinkedList::generate_random(int size, int seed) {
     srand(seed);
     for (int i = 0; i < size; ++i) {
-        push_back(rand() % 10000); // Losowa liczba z zakresu 0-9999
+        addBegin(rand() % 10000); // Losowa liczba z zakresu 0-9999
     }
 }
