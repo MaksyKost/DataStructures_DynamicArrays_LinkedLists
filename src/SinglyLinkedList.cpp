@@ -5,19 +5,19 @@
 #include "SinglyLinkedList.h"
 using namespace std::chrono;
 
-SinglyLinkedList::SinglyLinkedList() : head(nullptr), size(0) {}
-SinglyLinkedList::~SinglyLinkedList() {
+SinglyLinkedList::SinglyLinkedList() : head(nullptr), size(0) {} // konstruktor
+SinglyLinkedList::~SinglyLinkedList() { // destruktor
     clear();
 }
 
-void SinglyLinkedList::addBegin(int val) {
+void SinglyLinkedList::addBegin(int val) { // dodaje na początku
     Node* newNode = new Node(val);
     newNode->next = head;
     head = newNode;
     size++;
 }
 
-void SinglyLinkedList::addEnd(int val) {
+void SinglyLinkedList::addEnd(int val) { // dodaje na końcu
     Node* newNode = new Node(val);
     if (head == nullptr) head = newNode; // jeżeli lista pusta to head -> [val | nullptr] 
     else {
@@ -28,7 +28,7 @@ void SinglyLinkedList::addEnd(int val) {
     size++;
 }
 
-void SinglyLinkedList::addIndex(int index, int val) {
+void SinglyLinkedList::addIndex(int index, int val) { // dodaje na miejsce
     if (index < 0 || index > size) {
         std::cout << "Error\n";
         return;
@@ -50,7 +50,7 @@ void SinglyLinkedList::addIndex(int index, int val) {
     size++;
 }
 
-void SinglyLinkedList::removeBegin() {
+void SinglyLinkedList::removeBegin() { // usuwa na początku
     if (head == nullptr) return;
     Node* oldBegin = head;
     head = head->next;
@@ -58,7 +58,7 @@ void SinglyLinkedList::removeBegin() {
     size--;
 }
 
-void SinglyLinkedList::removeEnd() {
+void SinglyLinkedList::removeEnd() { // usuwa na końcu
     if (head == nullptr) return;
 
     if (head->next == nullptr) {
@@ -74,7 +74,7 @@ void SinglyLinkedList::removeEnd() {
     size--;
 }
 
-void SinglyLinkedList::removeIndex(int index) {
+void SinglyLinkedList::removeIndex(int index) { // usuwa na pozycji
     if (head == nullptr) return;
 
     if (index < 0 || index >= size) {
@@ -95,7 +95,7 @@ void SinglyLinkedList::removeIndex(int index) {
     size--;
 }
 
-int SinglyLinkedList::find(int val) const {
+int SinglyLinkedList::find(int val) const { // wyszukiwanie
     Node* current = head;
     int index = 0;
     while (current != nullptr) {
@@ -106,7 +106,7 @@ int SinglyLinkedList::find(int val) const {
     return -1;
 }
 
-void SinglyLinkedList::print() const {
+void SinglyLinkedList::print() const { // wyświetlenie
     Node* current = head;
     while (current != nullptr) {
         std::cout << current->data << " ";
@@ -115,11 +115,11 @@ void SinglyLinkedList::print() const {
     std::cout << "\n";
 }
 
-int SinglyLinkedList::getSize() const {
+int SinglyLinkedList::getSize() const { // zwraca rozmiar
     return size;
 }
 
-void SinglyLinkedList::clear() {
+void SinglyLinkedList::clear() { // czyśczy tablicę
     Node* current = head;
     while (current != nullptr) {
         Node* next = current->next;
@@ -130,26 +130,10 @@ void SinglyLinkedList::clear() {
     size = 0;
 }
 
-void SinglyLinkedList::fillRandom(int count, int seed) {
+void SinglyLinkedList::fillRandom(int count, int seed) { // wypełnia tablicę
     srand(seed);
     for (int i = size; i < count; i++) {
         int val = rand() % 10000;
         addEnd(val);
     }
-}
-
-double SinglyLinkedList::timeAddBegin() {
-    auto start = high_resolution_clock::now();
-    addBegin(rand() % 10000);
-    auto end = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(end - start);
-    return duration.count();
-}
-
-double SinglyLinkedList::timeAddEnd() {
-    auto start = high_resolution_clock::now();
-    addEnd(rand() % 10000);
-    auto end = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(end - start);
-    return duration.count();
 }
