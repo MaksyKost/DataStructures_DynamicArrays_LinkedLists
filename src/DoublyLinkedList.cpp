@@ -157,15 +157,6 @@ void DoublyLinkedList::print() const {
     std::cout << std::endl;
 }
 
-// Wyświetlenie listy od końca
-void DoublyLinkedList::display_reverse() const {
-    Node1* current = tail;
-    while (current) {
-        std::cout << current->data << " ";
-        current = current->prev;
-    }
-    std::cout << std::endl;
-}
 
 // Wyświetlenie ilości węzłów w liscie
 int DoublyLinkedList::getSize() const {

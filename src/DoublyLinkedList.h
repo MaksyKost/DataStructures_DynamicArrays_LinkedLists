@@ -33,7 +33,6 @@ public:
 
     // Dostęp i wyświetlanie
     void print() const;           // Wyświetlanie listy
-    void display_reverse() const;   // Wyświetlanie od końca
 
     int getSize() const;               // Wyświetlenie ilości węzłów w liscie
 
