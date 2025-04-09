@@ -10,7 +10,7 @@
 using namespace std;
 using namespace std::chrono;
 
-int seed = 123;
+const int SEED = 123;
 
 void fancyMenuTitle() {
     system("color 0C");
@@ -51,7 +51,7 @@ void menuArray(Structure *structure) {
         switch (choice) {
             case 1:
                 cout << "Podaj rozmiar: "; cin >> val;
-                structure->fillRandom(val, seed);
+                structure->fillRandom(val, SEED);
                 break;
             case 2:
                 cout << "Podaj wartość: "; cin >> val;
@@ -115,7 +115,7 @@ void menuSLL(SinglyLinkedList& list) {
         switch (choice) {
             case 1:
                 cout << "Podaj rozmiar: "; cin >> val;
-                list.fillRandom(val, seed);
+                list.fillRandom(val, SEED);
                 break;
             case 2:
                 cout << "Podaj wartość: "; cin >> val;
@@ -179,7 +179,7 @@ void menuDLL(DoublyLinkedList& list1) {
         switch (choice) {
             case 1:
                 cout << "Podaj rozmiar: "; cin >> val;
-                list1.fillRandom(val, seed);
+                list1.fillRandom(val, SEED);
                 break;
             case 2:
                 cout << "Podaj wartość: "; cin >> val;
